@@ -1,8 +1,8 @@
 var countryControllers = angular.module('countryControllers', []);
 
-countryControllers.controller('CountryListCtrl', function ($scope, countries){
+countryControllers.controller('CountryListCtrl', function ($scope, countries){  // countries is factory
   countries.list(function(countries) {
-    $scope.countries = countries;
+    $scope.countries = countries;  // pass countries obtained from the list() to html's scope
   });
 });
 

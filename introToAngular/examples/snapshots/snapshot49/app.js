@@ -41,9 +41,9 @@ countryApp.directive('country', function(){
     },
     restrict: 'A',
     templateUrl: 'country.html',
-    controller: function($scope, countries){
+    controller: function($scope, countries){ // $scope is private scope set above
       countries.find($scope.country.id, function(country) {
-        $scope.flagURL = country.flagURL;
+        $scope.flagURL = country.flagURL;  // country is read in from find()
       });
     }
   };

@@ -1,7 +1,7 @@
 angular.module('countryDirective', [])
        .directive('country', function(){
   return {
-    scope: { country: '=' },
+   // scope: { country: '=' },   // doesn't have to be private scope, can use scope at the html level that uses this directive
     restrict: 'A',
     templateUrl: 'country.html',
     controller: function($scope, countries){
